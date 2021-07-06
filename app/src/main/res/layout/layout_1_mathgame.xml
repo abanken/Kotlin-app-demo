@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/black"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout"
+            android:stretchColumns="*">
+            <TableRow android:id="@+id/tableRow">
+                <TextView android:layout_column="0"
+                    android:id="@+id/wrongAnswersLbl"
+                    android:text="Incorrect Answers: "
+                    android:gravity="center"
+                    android:textColor="#ff0000" />
+                <TextView android:layout_column="1"
+                    android:id="@+id/incorrectAnswers"
+                    android:text="0" android:textColor="#ff0000"
+                    android:gravity="center" />
+                <TextView android:layout_column="2"
+                    android:id="@+id/correctAnswersLbl"
+                    android:text="Correct Answers: "
+                    android:gravity="center"
+                    android:textColor="@android:color/holo_green_dark" />
+                <TextView android:layout_column="3"
+                    android:id="@+id/scores"
+                    android:text="0"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:gravity="center" />
+            </TableRow>
+        </TableLayout>
+    <TextView android:layout_below="@id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastMathQuestion"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp" />
+        <TextView android:layout_below="@id/lastMathQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/number1"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="45dp" />
+        <TextView android:layout_below="@id/number1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/number2"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+        <TextView android:paddingRight="80dp"
+            android:layout_below="@id/number1"
+            android:layout_alignLeft="@id/number1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/operatorSign"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="45dp" />
+        <TextView android:layout_below="@id/number1"
+            android:paddingTop="20dp"
+            android:text="__________"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Dashes"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="45dp" />
+        <EditText android:layout_below="@id/number2"
+            android:inputType="numberSigned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/answer"
+            android:hint="Enter Number here"
+            android:textColorHint="@android:color/white"
+            android:textColor="#18ff7c"
+            android:gravity="center"
+            android:textSize="40dp" />
+        <Button android:layout_below="@id/answer"
+            android:text="Submit Number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/answerBtn"
+            android:textColor="@android:color/black" />
+        <Button android:layout_below="@id/answer"
+            android:text="New Game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:id="@+id/NewGameBtn"
+            android:textColor="@android:color/black" />
+    <TableLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout2"
+        android:layout_below="@id/NewGameBtn"
+        android:stretchColumns="*">
+
+        <TableRow android:id="@+id/tableRow2">
+    <TextView
+
+        android:text="Previous High Score : "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/HighScoresLabel"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_column="0"
+        android:textSize="20dp"/>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/HighScores"
+            android:text="0"
+            android:textColor="@android:color/white"
+
+            android:textSize="20dp"/>
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/mathGamePic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/background_light"
+        android:paddingTop="20dp"
+        android:src="@drawable/mathgamepic" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mathGamePic"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:baselineAligned="false"
+        android:visibility="invisible"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/id_home_icon" />
+</RelativeLayout>

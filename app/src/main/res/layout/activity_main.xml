@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_teal_blue"
+        android:gravity="center"
+        android:text="Home Screen"
+        android:textColor="@android:color/black"
+
+        android:textSize="30sp" />
+
+    <com.imangazaliev.circlemenu.CircleMenu
+        android:id="@+id/circleMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+>
+
+
+
+            <com.imangazaliev.circlemenu.CircleMenuButton
+                android:id="@+id/circle_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:colorNormal="#2196F3"
+                app:colorPressed="#1E88E5"
+                app:icon="@drawable/id_weather_icon" />
+
+            <com.imangazaliev.circlemenu.CircleMenuButton
+                android:id="@+id/circle_math"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:colorNormal="#4CAF50"
+                app:colorPressed="#43A047"
+                app:icon="@drawable/id_math_icon" />
+
+            <com.imangazaliev.circlemenu.CircleMenuButton
+                android:id="@+id/circle_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:colorNormal="#F44336"
+                app:colorPressed="#E53935"
+                app:icon="@drawable/id_video_icon" />
+    </com.imangazaliev.circlemenu.CircleMenu>
+</android.support.constraint.ConstraintLayout>
